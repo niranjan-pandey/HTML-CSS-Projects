@@ -1,0 +1,62 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+     background: rgb(5, 5, 34);
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.container {
+     position: relative;
+     height: 500px;
+     width: 350px;
+     background: #fff;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+}
+
+.container.active {
+     background: #000;
+}
+
+.container:before {
+     content: "";
+     position: absolute;
+     height: 750px;
+     width: 650px;
+     background: conic-gradient(transparent, transparent, transparent, #fff);
+     animation: move 3s linear infinite;
+}
+
+@keyframes move {
+     0% {
+          transform: rotate(0deg);
+     }
+
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+.container .overlay {
+     position: absolute;
+     height: 485px;
+     width: 335px;
+     background: rgb(5, 5, 34);
+     color: #fff;
+     border-radius: 5px;
+     font-size: 80px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
